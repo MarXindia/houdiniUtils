@@ -11,7 +11,7 @@ from googleapiclient.http import MediaFileUpload
 
 class GDriveUtils:
 
-    def __init__(self, client_secret, token, file_to_upload, file_in_folder='Default', port=8080):
+    def __init__(self, client_secret:str, token:str, file_to_upload:str, file_in_folder='Default', port=8080):
 
         self.port = port
         self.client_secret = client_secret
