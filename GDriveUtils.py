@@ -51,7 +51,7 @@ class GDriveUtils:
 
         if not local_path:
             file_name = os.path.basename(file_name)
-        print(file_name)
+
         file_metadata = {
             'name': file_name,  # Name of the file in Google Drive
             'mimeType': mime_type,
@@ -86,6 +86,5 @@ if __name__ == '__main__':
     token = 'D:/github/__Secrets/token.json'
     client_secret = 'D:/github/__Secrets/mar_credentials.json'
     folder_name = 'Week_03_Python_test'
-    file_name_in_drive = 'This_File'
     file_up=GDriveUtils(client_secret,token,file_to_upload, folder_name)
     file_up.upload_file(local_path=True)
