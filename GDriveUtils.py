@@ -62,7 +62,9 @@ class GDriveUtils:
 
         # Upload the file
         file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-        print('File ID: %s' % file.get('id'))
+        out = 'Upload Successful....... \n File {} uploaded to folder {} in google drive'.format(file_name,self.file_in_folder)
+        return (out,'File ID: %s' % file.get('id'))
+
 
     def _create_folder(self, drive_service):
         gdrive_folder_name = self.file_in_folder
